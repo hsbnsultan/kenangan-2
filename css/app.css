@@ -90,7 +90,7 @@ body::-webkit-scrollbar {
 .love-gift {
   position: relative;
   min-height: 100vh;
-  background-image: url(../images/images.png);
+  background-image: url(../images/thema-5.png);
   background-size: cover;
   background-position: center;
   padding-top: 10rem;
@@ -127,7 +127,7 @@ body::-webkit-scrollbar {
   background-image: url(../images/background.jpg);
   background-size: cover;
   background-position: center;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .font-estetik {
@@ -164,12 +164,6 @@ body::-webkit-scrollbar {
   font-family: "Dancing Script", cursive;
   font-weight: 600;
   font-size: 2.4rem;
-}
-
-.font-galeri {
-  font-family: "Dancing Script", cursive;
-  font-weight: 600;
-  font-size: 3rem;
 }
 
 .font-tamu {
@@ -268,6 +262,7 @@ body::-webkit-scrollbar {
 .card-body {
   overflow-wrap: break-word !important;
   color: #03404c;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .card.bg-custom {
@@ -299,7 +294,7 @@ body::-webkit-scrollbar {
 
 .date {
   position: relative;
-  min-height: 60vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -307,6 +302,7 @@ body::-webkit-scrollbar {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #0ea7c6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .date::before {
@@ -319,7 +315,7 @@ body::-webkit-scrollbar {
   background-image: url(../images/date-4.jpg);
   background-size: cover;
   background-position: center;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .tulisan {
@@ -332,6 +328,7 @@ body::-webkit-scrollbar {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #0ea7c6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .tulisan::before {
@@ -344,7 +341,7 @@ body::-webkit-scrollbar {
   background-image: url(../images/background.jpg);
   background-size: cover;
   background-position: center;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .centered-button {
