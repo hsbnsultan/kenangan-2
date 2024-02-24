@@ -23,7 +23,7 @@
     />
     <link
       rel="preconnect"
-      href="https://undangan-api-three.vercel.app/"
+      href="https://backend-undangan-sepia.vercel.app/"
       crossorigin="anonymous"
     />
     <link
@@ -56,10 +56,8 @@
     <!-- Tautan Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Tautan Font Gabungan -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Dancing+Script:wght@400;500;600&family=Fira+Sans:wght@400;500&family=Grand+Hotel&family=Josefin+Sans:wght@400;500&family=Lobster+Two&family=Overpass:wght@400;500&family=Roboto+Slab:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fira+Sans:wght@400;500&family=Lexend:wght@500&family=Sacramento&family=Shippori+Mincho+B1&display=swap"
       rel="stylesheet"
     />
 
@@ -70,6 +68,8 @@
       integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4="
       crossorigin="anonymous"
     />
+
+    <link href="./boxicons/css/boxicons.min.css" rel="stylesheet" />
 
     <!-- Tautan CSS Gabungan Anda -->
     <link rel="stylesheet" href="css/app.css" />
@@ -86,11 +86,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+    />
+
+    <!-- CSS untuk efek scroll smooth -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body
     data-email="user@example.com"
     data-password="12345678"
-    data-url="https://undangan-api-three.vercel.app/"
+    data-url="https://backend-undangan-sepia.vercel.app/"
   >
     <!-- Navbar Section-->
     <nav
@@ -100,35 +112,32 @@
       <ul class="navbar-nav nav-justified w-100 align-items-center">
         <li class="nav-item">
           <a class="nav-link text-white" href="#home">
-            <i
-              class="fa-solid fa-house-circle-check"
-              style="font-size: 1rem"
-            ></i>
-            <span class="d-block" style="font-size: 0.6rem">Home</span>
+            <i class="bx bxs-home" style="font-size: 1.6rem"></i>
+            <span class="d-block" style="font-size: 0.8rem">Home</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#mempelai">
-            <i class="fa-solid fa-user-group" style="font-size: 1rem"></i>
-            <span class="d-block" style="font-size: 0.6rem">Mempelai</span>
+            <i class="bx bxs-user-circle" style="font-size: 1.6rem"></i>
+            <span class="d-block" style="font-size: 0.8rem">Mempelai</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#tanggal">
-            <i class="fa-solid fa-calendar-check" style="font-size: 1rem"></i>
-            <span class="d-block" style="font-size: 0.6rem">Tanggal</span>
+            <i class="bx bxs-calendar" style="font-size: 1.6rem"></i>
+            <span class="d-block" style="font-size: 0.8rem">Tanggal</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#galeri">
-            <i class="fa-solid fa-images" style="font-size: 1rem"></i>
-            <span class="d-block" style="font-size: 0.6rem">Galeri</span>
+          <a class="nav-link text-white" href="#galery">
+            <i class="bx bxs-image" style="font-size: 1.6rem"></i>
+            <span class="d-block" style="font-size: 0.8rem">Galeri</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#ucapan">
-            <i class="fa-solid fa-envelope-open" style="font-size: 1rem"></i>
-            <span class="d-block" style="font-size: 0.6rem">Ucapan</span>
+            <i class="bx bxs-envelope-open" style="font-size: 1.6rem"></i>
+            <span class="d-block" style="font-size: 0.8rem">Ucapan</span>
           </a>
         </li>
       </ul>
@@ -145,146 +154,94 @@
       <section class="home" id="home">
         <div class="container text-center">
           <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-6">
               <div
-                class="card border rounded-pill m-3 p-3 rounded-bottom text-center"
+                class="img-custom rounded-pill border border-3 rounded-bottom shadow mb-4 mx-auto"
               >
-                <img
-                  src="./images/couple-1.jpg"
-                  class="card-img-top rounded-pill rounded-bottom"
-                  alt="Wedding Image"
-                />
-                <div class="card-body">
-                  <h5 class="card-title font-asyik mt-2 mb-2 mx-0 p-0">
-                    The Wedding Of
-                  </h5>
-                  <p class="card-text font-keren mt-2 mb-2 mx-0 p-0">
-                    Marcel & Steffia
-                  </p>
-                  <p class="card-text font-tanggal mt-2 mb-2 mx-0 p-0">
-                    Minggu, 10 April 2024
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-custom rounded-pill my-2 text-white"
-                    >Save The Date</a
-                  >
-                  <br />
-                  <span
-                    style="
-                      font-size: 1.8rem;
-                      margin-top: 5px;
-                      display: inline-block;
-                      animation: bounce 1s infinite;
-                    "
-                  >
-                    <i class="fa-solid fa-angles-down"></i>
-                  </span>
-                </div>
+                <img src="./images/couple.jpg" alt="bg" loading="lazy" />
+              </div>
+              <div class="card-body py-2">
+                <div class="title">The Wedding Of</div>
+                <p class="judul mb-2">Marcel & Steffia</p>
+                <a href="#" class="btn btn-custom rounded-pill my-2 text-white">
+                  <i class="bx bx-calendar"></i> Save The Date
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Tulisan Section -->
-      <section id="tulisan" class="tulisan bg-dark">
+      <section class="couple" id="mempelai">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="text-center">
-              <img
-                src="icon/gunungan.png"
-                alt="Save The Date"
-                width="75"
-                height="75"
-                data-aos="zoom-in"
-                data-aos-duration="700"
-              />
-              <h2 class="my-4">
-                <span class="font-cool">We Are</span>
-                <br />
-                <span class="font-kalem">Getting Married</span>
-              </h2>
-              <h5 class="mb-4" data-aos="fade-up" data-aos-duration="700">
-                <i>
-                  Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
-                  untukmu isteri-isteri dari jenismu sendiri, supaya kamu
-                  cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya
-                  diantaramu rasa kasih dan sayang. Sesungguhnya pada yang
-                  demikian itu benar-benar terdapat tanda-tanda bagi kaum yang
-                  berfikir.
-                </i>
-              </h5>
-              <h4 class="mb-2"><i>QS. Ar-Rum Ayat 21</i></h4>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="mempelai" class="couple">
-        <div class="container">
-          <div class="card border rounded-pill border m-4 p-3">
-            <div class="row justify-content-center mb-4">
-              <div class="text-center">
+          <div class="card rounded-pill p-2 m-2 bg-custom">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-10 text-center mt-5">
                 <img
-                  src="icon/bunga-4.png"
+                  src="icon/couple.png"
                   alt="Save The Date"
-                  width="95"
-                  height="95"
-                  class="my-4"
+                  width="100"
+                  height="100"
+                  class="mb-4"
                   data-aos="zoom-in"
                   data-aos-duration="700"
                 />
-                <div class="col-md-12">
-                  <div class="section-title my-2">
-                    <span class="font-cool">Kedua</span>
-                    <br />
-                    <span class="font-kalem">Mempelai</span>
+                <div class="section-title">
+                  <div class="title mb-2">
+                    Assalamuallaikum Warahmatullahi Wabarakatuh
+                  </div>
+                  <div class="description mb-2">
+                    Kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian
+                    untuk menghadiri acara pernikahan kami:
                   </div>
                 </div>
               </div>
-              <div class="row text-center mb-4">
-                <div class="col-md-6">
-                  <div
-                    class="img-custom border border-3 border-light shadow mb-4 mx-auto"
-                    data-aos="fade-up"
-                    data-aos-duration="900"
-                  >
-                    <img src="./images/kim.jpg" alt="bg" />
-                  </div>
-                  <div class="section-title">
-                    <h2 class="font-keren">Marcel Steven</h2>
-                    <p>Putra Pertama Bapak Herwanto & Ibu Noviyanti</p>
-                  </div>
-                  <div class="social-icons my-2">
-                    <a href="#" target="_blank" class="social-icons-button"
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a href="#" target="_blank"
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                  </div>
+            </div>
+            <div class="row justify-content-center my-4">
+              <div class="col-md-6 text-center">
+                <div
+                  class="img-custom border border-3 border-light shadow mb-4 mx-auto"
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                >
+                  <img src="./images/kim.jpg" alt="bg" loading="lazy" />
                 </div>
-                <div class="col-md-6">
-                  <div
-                    class="img-custom border border-3 border-light shadow mb-4 mx-auto"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    <img src="./images/jennie.jpg" alt="bg" />
-                  </div>
-                  <div class="section-title">
-                    <h2 class="font-keren">Steffia Azzahra</h2>
-                    <p>Putri Kedua Bapak Erlangga & Ibu Putri</p>
-                  </div>
-                  <div class="social-icons">
-                    <a href="#" target="_blank" class="social-icons-button"
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a href="#" target="_blank"
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                  </div>
+                <div class="section-title">
+                  <h2 class="title">Marcel Steven</h2>
+                  <p class="description">
+                    Putra Pertama Bapak Herwanto & Ibu Noviyanti
+                  </p>
+                </div>
+                <div class="social-icons mb-4">
+                  <a href="#" target="_blank" class="social-icons-button">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 text-center">
+                <div
+                  class="img-custom border border-3 border-light shadow mb-4 mx-auto"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img src="./images/jennie.jpg" alt="bg" loading="lazy" />
+                </div>
+                <div class="section-title">
+                  <h2 class="title">Steffia Azzahra</h2>
+                  <p class="description">
+                    Putri Kedua Bapak Erlangga & Ibu Putri
+                  </p>
+                </div>
+                <div class="social-icons mb-4">
+                  <a href="#" target="_blank" class="social-icons-button">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -297,23 +254,40 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="text-center">
-              <span class="font-cool">Menuju</span>
-              <br />
-              <span class="font-kalem">Hari Bahagia</span>
-              <h3 class="font-nama my-2">
-                Kami bersyukur, dipertemukan Allah diwaktu terbaik, Kini kami
-                menanti hari istimewa kami.
-              </h3>
+              <img
+                src="icon/lafadz.png"
+                alt="Save The Date"
+                width="100"
+                height="100"
+                class="mb-2"
+                data-aos="zoom-in"
+                data-aos-duration="850"
+              />
+              <div class="text-center mb-4">
+                <span class="title">We Are</span>
+                <br />
+                <span class="title">Getting Married</span>
+              </div>
+              <div class="description mb-4">
+                Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+                untukmu isteri-isteri dari jenismu sendiri, supaya kamu
+                cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya
+                diantaramu rasa kasih dan sayang. Sesungguhnya pada yang
+                demikian itu benar-benar terdapat tanda-tanda bagi kaum yang
+                berfikir.
+              </div>
+              <div class="description mb-4">QS.Ar-Rum 21</div>
+              <div class="title mb-4">Save The Date</div>
               <div
-                class="my-4 d-flex justify-content-center"
-                data-waktu="2024-01-01 00:00:00"
+                class="mb-4 d-flex justify-content-center"
+                data-waktu="2024-05-05 00:00:00"
                 id="tampilan-waktu"
                 data-aos="fade-up"
                 data-aos-duration="700"
               >
                 <!-- Kotak Hari -->
                 <div
-                  class="rounded-4 shadow py-2 px-4 mx-2 bg-custom text-white"
+                  class="rounded-4 shadow py-2 px-4 mx-2 bg-kenangan text-dark"
                 >
                   <h2 class="d-inline display-5 m-0 p-0" id="hari">0</h2>
                   <br />
@@ -322,7 +296,7 @@
 
                 <!-- Kotak Jam -->
                 <div
-                  class="rounded-4 shadow py-2 px-4 mx-2 bg-custom text-white"
+                  class="rounded-4 shadow py-2 px-4 mx-2 bg-kenangan text-dark"
                 >
                   <h2 class="d-inline display-5 m-0 p-0" id="jam">0</h2>
                   <br />
@@ -331,7 +305,7 @@
 
                 <!-- Kotak Menit -->
                 <div
-                  class="rounded-4 shadow py-2 px-4 mx-2 bg-custom text-white"
+                  class="rounded-4 shadow py-2 px-4 mx-2 bg-kenangan text-dark"
                 >
                   <h2 class="d-inline display-5 m-0 p-0" id="menit">0</h2>
                   <br />
@@ -340,7 +314,7 @@
 
                 <!-- Kotak Detik -->
                 <div
-                  class="rounded-4 shadow py-2 px-4 mx-2 bg-custom text-white"
+                  class="rounded-4 shadow py-2 px-4 mx-2 bg-kenangan text-dark"
                 >
                   <h2 class="d-inline display-5 m-0 p-0" id="detik">0</h2>
                   <br />
@@ -353,353 +327,348 @@
       </section>
 
       <section id="our-journey" class="our-journey">
+        <div class="container text-center">
+          <img
+            src="icon/cinta.png"
+            alt="Save The Date"
+            width="100"
+            height="100"
+            class="mb-4"
+            data-aos="zoom-in"
+            data-aos-duration="700"
+          />
+          <h1 class="title mb-4">Kisah Cinta Kita</h1>
+          <p class="description mb-2">
+            Sebuah perjalanan indah yang penuh warna, diukir oleh waktu dan
+            berbagi momen bahagia bersama. Setiap detiknya adalah cerita tentang
+            cinta yang tak terlupakan, tentang kita.
+          </p>
+        </div>
+        <div class="text-center" style="position: relative">
+          <hr class="my-4" style="border-color: #000000; order: 2" />
+          <div
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 1;
+            "
+          >
+            <i class="fas fa-heart fa-lg heart"></i>
+          </div>
+        </div>
+        <div class="timeline-wrapper">
+          <div class="center-line">
+            <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+          </div>
+          <div class="timeline-row timeline-row-1">
+            <section>
+              <i class="icon fas fa-handshake"></i>
+              <img src="./images/date-1.jpg" alt="Gambar 1" loading="lazy" />
+              <!-- Mengganti kelas ikon -->
+              <div class="details">
+                <span class="title">Awal Pertemuan</span>
+                <!-- Mengganti teks judul -->
+                <span>04 Agustus 2022</span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Delectus cupiditate sunt totam accusamus, ipsum id!
+              </p>
+            </section>
+          </div>
+
+          <div class="timeline-row timeline-row-2">
+            <section>
+              <i class="icon fas fa-heart"></i>
+              <img src="./images/date-2.jpg" alt="Gambar 2" loading="lazy" />
+              <!-- Mengganti kelas ikon -->
+              <div class="details">
+                <span class="title">Menjalin Hubungan</span>
+                <!-- Mengganti teks judul -->
+                <span>12 Desember 2022</span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita, et minima nisi aperiam ipsum quo molestias?
+              </p>
+            </section>
+          </div>
+
+          <div class="timeline-row timeline-row-1">
+            <section>
+              <i class="icon fas fa-user-friends"></i>
+              <img src="./images/date-3.jpg" alt="Gambar 3" loading="lazy" />
+              <!-- Mengganti kelas ikon -->
+              <div class="details">
+                <span class="title">Bertunangan</span>
+                <span>04 Agustus 2023</span>
+              </div>
+              <p>
+                We launched our dreams into the vastness of space. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </section>
+          </div>
+
+          <div class="timeline-row timeline-row-2">
+            <section>
+              <i class="icon fas fa-heartbeat"></i>
+              <img src="./images/date-4.jpg" alt="Gambar 4" loading="lazy" />
+              <!-- Mengganti kelas ikon -->
+              <div class="details">
+                <span class="title">Happy Ending</span>
+                <!-- Mengganti teks judul -->
+                <span>03 Maret 2024</span>
+              </div>
+              <p>
+                Traveled across the globe, experiencing diverse cultures. Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </section>
+          </div>
+
+          <div class="timeline-row timeline-row-1">
+            <section>
+              <i class="icon fas fa-ring"></i>
+              <img src="./images/date-5.jpg" alt="Gambar 5" loading="lazy" />
+              <!-- Mengganti kelas ikon -->
+              <div class="details">
+                <span class="title">Pernikahan</span>
+                <!-- Mengganti teks judul -->
+                <span>04 April 2024</span>
+              </div>
+              <p>
+                Flew paper planes and let imagination soar high. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info Section-->
+      <section id="tanggal" class="info bg-dark">
         <div class="container">
-          <div class="card border rounded-4 shadow p-3">
-            <h2 class="font-kalem text-center mb-4">Kisah Cinta Kita</h2>
-            <div class="row">
-              <div
-                class="col-12 mb-3"
-                data-aos="zoom-in"
-                data-aos-duration="800"
-              >
-                <a
-                  href="./images/latar-background.jpg"
-                  data-lightbox="image-set-1"
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-10 text-center">
+              <div class="title mb-4">Informasi Acara</div>
+              <div class="text-center" style="position: relative">
+                <hr class="my-4" style="border-color: #ffff; order: 2" />
+                <div
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                  "
                 >
+                  <i class="fas fa-heart fa-lg heart"></i>
+                </div>
+              </div>
+              <div class="description">
+                Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba
+                di tujuan namun tidak ada tanda-tanda sedang dilangsungkan
+                pernikahan, boleh jadi Anda salah jadwal, atau salah tempat.
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center mt-4">
+            <div
+              class="col-md-5 col-10"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <div class="card text-center text-bg-light mb-5">
+                <div class="card-header title">Akad Nikah</div>
+                <div class="card-body">
+                  <div class="row justify-content-center">
+                    <div class="col-md-6">
+                      <i class="far fa-calendar-alt d-block my-2"></i>
+                      <span>Minggu, 10 April 2024</span>
+                    </div>
+                    <div class="col-md-6">
+                      <i class="far fa-clock d-block my-2"></i>
+                      <span>08.00 WIB s/d Selesai</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer description">
+                  Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan
+                  dan kekhusyuan seluruh prosesi.
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="https://maps.app.goo.gl/ZxM2QJU2rMC4mTut9"
+                    target="_blank"
+                    class="btn my-2 btn-custom text-white"
+                  >
+                    Buka Lokasi Peta
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-5 col-10"
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+            >
+              <div class="card text-center text-bg-light">
+                <div class="card-header title">Resepsi</div>
+                <div class="card-body">
+                  <div class="row justify-content-center">
+                    <div class="col-md-6">
+                      <i class="far fa-calendar-alt d-block my-2"></i>
+                      <span>Minggu, 10 April 2024</span>
+                    </div>
+                    <div class="col-md-6">
+                      <i class="far fa-clock d-block my-2"></i>
+                      <span>10.00 WIB s/d Selesai</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer description">
+                  Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan
+                  dan kekhusyuan seluruh prosesi.
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="https://maps.app.goo.gl/ZxM2QJU2rMC4mTut9"
+                    target="_blank"
+                    class="btn my-2 btn-custom text-white"
+                  >
+                    Buka Lokasi Peta
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center mt-4">
+            <!-- Tempat untuk memindai QR barcode -->
+            <div class="col-md-5 col-10 text-center mt-4">
+              <div class="mx-auto" style="max-width: 200px">
+                <!-- Tambahkan elemen <img> untuk QR code scanner di sini -->
+                <img
+                  src="./icon/qr-code.png"
+                  alt="QR Code Scanner"
+                  loading="lazy"
+                  style="max-width: 150px; height: auto"
+                />
+                <!-- Tambahkan teks Scan Alamat Disini di bawah gambar QR code -->
+                <p class="mt-4">Scan Alamat Disini</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="galeri" id="galery">
+        <div class="container text-center">
+          <div class="title mb-4">Memori Galeri</div>
+          <div class="text-center" style="position: relative">
+            <hr class="mb-4" style="border-color: #000000; order: 2" />
+            <div
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+              "
+            >
+              <i class="fas fa-heart fa-lg heart"></i>
+            </div>
+          </div>
+          <div class="description text-center mb-4">
+            Tempat di mana keindahan dan kebahagiaan momen pernikahan terpancar
+            melalui setiap foto. Dengan setiap gambar, kami mengabadikan cinta
+            sejati dan keintiman yang tak terlupakan. Mari bergabunglah dengan
+            kami di Memory Gallery untuk merayakan keindahan cinta dan memori
+            indah dalam hidup kita.
+          </div>
+          <div class="slider-wrapper">
+            <button
+              id="prev-slide"
+              class="slide-button material-symbols-rounded"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <ul class="image-list">
+              <li>
+                <a data-fancybox="gallery" href="./images/date-1.jpg">
                   <img
-                    src="./images/latar-background.jpg"
-                    alt="Kisah Cinta Kita"
-                    class="img-fluid rounded mb-4"
+                    class="image-item rounded"
+                    src="./images/date-1.jpg"
+                    alt="img-1"
                     loading="lazy"
                   />
                 </a>
-              </div>
-
-              <div
-                class="col-12 mb-3"
-                data-aos="zoom-in"
-                data-aos-duration="900"
-              >
-                <div class="section-title">
-                  <h4 class="card-title font-estetik mb-2">Awal Ketemuan</h4>
-                  <hr class="my-2" style="border-color: #000000; order: 2" />
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vitae enim quo omnis reprehenderit quia! Qui iste commodi
-                    iure obcaecati porro.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="col-12 mb-3"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-              >
-                <div class="section-title">
-                  <h4 class="card-title font-estetik mb-2">
-                    Menjalin Hubungan
-                  </h4>
-                  <hr class="my-2" style="border-color: #000000; order: 2" />
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Maxime assumenda, alias perspiciatis dolore est voluptatum
-                    repellendus eos quibusdam fugiat pariatur reiciendis!
-                  </p>
-                </div>
-              </div>
-              <div
-                class="col-12 mb-3"
-                data-aos="zoom-in"
-                data-aos-duration="1100"
-              >
-                <div class="section-title">
-                  <h4 class="card-title font-estetik mb-2">Bertunangan</h4>
-                  <hr class="my-2" style="border-color: #000000; order: 2" />
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vero corporis tenetur optio ducimus vel perferendis voluptas
-                    debitis, porro neque aspernatur? Explicabo, doloremque.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="col-12 mb-3"
-                data-aos="zoom-in"
-                data-aos-duration="1200"
-              >
-                <div class="section-title">
-                  <h4 class="card-title font-estetik mb-2">
-                    Menuju Hari Bahagia
-                  </h4>
-                  <hr class="my-2" style="border-color: #000000; order: 2" />
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatem ratione nostrum sequi libero ipsum, sapiente
-                    perferendis praesentium harum consequuntur? Fugiat numquam
-                    aut dolorem?
-                  </p>
-                </div>
-              </div>
-            </div>
+              </li>
+              <li>
+                <a data-fancybox="gallery" href="./images/date-2.jpg">
+                  <img
+                    class="image-item rounded"
+                    src="./images/date-2.jpg"
+                    alt="img-2"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li>
+                <a data-fancybox="gallery" href="./images/date-3.jpg">
+                  <img
+                    class="image-item rounded"
+                    src="./images/date-3.jpg"
+                    alt="img-3"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li>
+                <a data-fancybox="gallery" href="./images/date-4.jpg">
+                  <img
+                    class="image-item rounded"
+                    src="./images/date-4.jpg"
+                    alt="img-4"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li>
+                <a data-fancybox="gallery" href="./images/date-5.jpg">
+                  <img
+                    class="image-item rounded"
+                    src="./images/date-5.jpg"
+                    alt="img-5"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li>
+                <a data-fancybox="gallery" href="./images/date-6.jpg">
+                  <img
+                    class="image-item rounded"
+                    src="./images/date-6.jpg"
+                    alt="img-6"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+            </ul>
+            <button
+              id="next-slide"
+              class="slide-button material-symbols-rounded"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
           </div>
-        </div>
-      </section>
-
-      <section id="tanggal" class="info">
-        <div class="container text-center">
-          <div
-            class="card border rounded-pill shadow rounded-bottom m-2 p-4 mx-auto"
-            style="height: auto"
-          >
-            <div class="row justify-content-center mt-4">
-              <div class="col-md-6">
-                <h2 class="font-kalem text-center my-4">With Love</h2>
-                <p class="my-4">
-                  kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir di
-                  acara pernikahan kami yang akan dilaksanakan pada:
-                </p>
-
-                <!-- Akad Nikah -->
-                <div class="col-md-12">
-                  <div class="card-body text-center">
-                    <i
-                      class="fa-solid fa-hand-holding-heart my-2"
-                      style="font-size: 2.5rem"
-                    ></i>
-                    <h5 class="card-title">Akad Nikah</h5>
-                    <p>Minggu, 10 April 2024</p>
-                    <p>08.00 WIB s/d Selesai</p>
-                    <div
-                      class="d-flex align-items-center justify-content-center"
-                    >
-                      <hr
-                        class="flex-grow-1 mx-1"
-                        style="
-                          border-color: #000000;
-                          border-width: 2.5px;
-                          max-width: 300px;
-                        "
-                      />
-                      <h2 class="my-2">
-                        <i class="fa-solid fa-house-chimney-user"></i>
-                      </h2>
-                      <hr
-                        class="flex-grow-1 mx-1"
-                        style="
-                          border-color: #000000;
-                          border-width: 2.5px;
-                          max-width: 300px;
-                        "
-                      />
-                    </div>
-                    <p class="font-akad card-text">
-                      <strong>Kediaman Mempelai Wanita</strong>
-                    </p>
-                    <p>
-                      Jl. Taman Mini I No.4, RT.4/RW.2, Pinang Ranti, Kec.
-                      Makasar, Kota Jakarta Timur, DKI Jakarta 13560
-                    </p>
-                    <a
-                      href="link_lokasi_resepsi"
-                      target="_blank"
-                      class="btn rounded-pill my-2 btn-custom text-white"
-                    >
-                      <i class="fas fa-map-marker-alt"></i> Maps Lokasi Akad
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Resepsi -->
-                <div class="col-md-12">
-                  <div class="card-body text-center">
-                    <i
-                      class="fa-solid fa-champagne-glasses my-2"
-                      style="font-size: 2.5rem"
-                    ></i>
-                    <h5 class="card-title">Resepsi</h5>
-                    <p>Minggu, 10 April 2024</p>
-                    <p>10.00 WIB s/d Selesai</p>
-                    <div
-                      class="d-flex align-items-center justify-content-center"
-                    >
-                      <hr
-                        class="flex-grow-1 mx-1"
-                        style="
-                          border-color: #000000;
-                          border-width: 2.5px;
-                          max-width: 300px;
-                        "
-                      />
-                      <h2 class="my-2">
-                        <i class="fa-solid fa-house-chimney-user"></i>
-                      </h2>
-                      <hr
-                        class="flex-grow-1 mx-1"
-                        style="
-                          border-color: #000000;
-                          border-width: 2.5px;
-                          max-width: 300px;
-                        "
-                      />
-                    </div>
-                    <p class="font-akad card-text">
-                      <strong>Kediaman Mempelai Wanita</strong>
-                    </p>
-                    <p>
-                      Jl. Taman Mini I No.4, RT.4/RW.2, Pinang Ranti, Kec.
-                      Makasar, Kota Jakarta Timur, DKI Jakarta 13560
-                    </p>
-                    <a
-                      href="link_lokasi_resepsi"
-                      target="_blank"
-                      class="btn rounded-pill my-2 btn-custom text-white"
-                    >
-                      <i class="fas fa-map-marker-alt"></i> Maps Lokasi Resepsi
-                    </a>
-                  </div>
-                </div>
-
-                <!-- QR Code Section -->
-                <div class="col-md-12">
-                  <div class="card-body text-center">
-                    <!-- Add your QR code generation logic here -->
-                    <!-- You can use a library like QRCode.js or any other method -->
-
-                    <!-- Placeholder QR code image -->
-                    <img
-                      src="./icon/qr-code.png"
-                      alt="QR Code"
-                      style="width: 150px; height: 150px"
-                    />
-
-                    <!-- Text below QR code -->
-                    <p class="my-2">Scan Alamat Lokasi Di Sini</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- gallery section -->
-      <section class="galeri bg-dark" id="galeri">
-        <div class="container-fluid">
-          <h1 class="font-kalem text-center">Memori Gallery</h1>
-          <div class="row mt-4">
-            <div
-              class="item col-12 col-sm-6 col-md-4 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="800"
-            >
-              <a
-                href="./images/date-1.jpg"
-                class="fancybox"
-                data-fancybox="gallery1"
-              >
-                <img
-                  src="./images/date-1.jpg"
-                  width="100%"
-                  height="100%"
-                  class="rounded"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-            <div
-              class="item col-12 col-sm-6 col-md-4 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="900"
-            >
-              <a
-                href="./images/date-2.jpg"
-                class="fancybox"
-                data-fancybox="gallery1"
-              >
-                <img
-                  src="./images/date-2.jpg"
-                  width="100%"
-                  height="100%"
-                  class="rounded"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-            <div
-              class="item col-12 col-sm-6 col-md-4 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <a
-                href="./images/date-3.jpg"
-                class="fancybox"
-                data-fancybox="gallery1"
-              >
-                <img
-                  src="./images/date-3.jpg"
-                  width="100%"
-                  height="100%"
-                  class="rounded"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-            <div
-              class="item col-12 col-sm-6 col-md-4 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="1100"
-            >
-              <a
-                href="./images/date-4.jpg"
-                class="fancybox"
-                data-fancybox="gallery1"
-              >
-                <img
-                  src="./images/date-4.jpg"
-                  width="100%"
-                  height="100%"
-                  class="rounded"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-            <div
-              class="item col-12 col-sm-6 col-md-4 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="1400"
-            >
-              <a
-                href="./images/date-5.jpg"
-                class="fancybox"
-                data-fancybox="gallery1"
-              >
-                <img
-                  src="./images/date-5.jpg"
-                  width="100%"
-                  height="100%"
-                  class="rounded"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-            <div
-              class="item col-12 col-sm-6 col-md-4 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-            >
-              <a
-                href="./images/date-6.jpg"
-                class="fancybox"
-                data-fancybox="gallery1"
-              >
-                <img
-                  src="./images/date-6.jpg"
-                  width="100%"
-                  height="100%"
-                  class="rounded"
-                  loading="lazy"
-                />
-              </a>
+          <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+              <div class="scrollbar-thumb"></div>
             </div>
           </div>
         </div>
@@ -711,12 +680,25 @@
           <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
               <div class="container py-4">
-                <h1 class="font-kalem mt-0 my-2">Love Gift</h1>
-                <p class="my-4">
-                  Doa Restu Anda merupakan karunia yang sangat berarti bagi
-                  kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda
-                  dapat memberi kado secara cashless.
-                </p>
+                <div class="title mb-4">Love Gift</div>
+                <div class="text-center" style="position: relative">
+                  <hr class="mb-4" style="border-color: #000000; order: 2" />
+                  <div
+                    style="
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      z-index: 1;
+                    "
+                  >
+                    <i class="fas fa-heart fa-lg heart"></i>
+                  </div>
+                </div>
+                <div class="description mb-4">
+                  Mengurangi rasa hormat, bagi anda yang ingin memberikan tanda
+                  kasih untuk kami, dapat melalui
+                </div>
                 <div class="overflow-x-hidden hidden-before-click">
                   <div class="row justify-content-center">
                     <!-- Payment BCA -->
@@ -731,7 +713,7 @@
                         background: linear-gradient(
                           to bottom right,
                           #ffffff,
-                          #dfe9f3
+                          #f0f8ff
                         );
                       "
                     >
@@ -744,7 +726,7 @@
                       />
                       <div style="flex: 1">
                         <p
-                          class="card-text mt-3 mb-0"
+                          class="card-text title mt-3 mb-0"
                           style="
                             font-size: 1.5rem;
                             white-space: nowrap;
@@ -753,16 +735,18 @@
                             text-align: left;
                             letter-spacing: 2px;
                             text-decoration: none;
+                            color: #333366;
                           "
                         >
                           6871507071
                         </p>
                         <p
-                          class="card-text"
+                          class="card-text title"
                           style="
                             font-size: 1.2rem;
                             text-align: left;
                             text-transform: uppercase;
+                            color: #333366;
                           "
                         >
                           Marcel Steven
@@ -773,6 +757,7 @@
                         class="img-fluid rounded"
                         width="75"
                         alt="bca"
+                        loading="lazy"
                         style="position: absolute; top: 10px; right: 10px"
                       />
                       <button
@@ -798,7 +783,7 @@
                         background: linear-gradient(
                           to bottom right,
                           #ffffff,
-                          #dfe9f3
+                          #f0f8ff
                         );
                       "
                     >
@@ -811,7 +796,7 @@
                       />
                       <div style="flex: 1">
                         <p
-                          class="card-text mt-3 mb-0"
+                          class="card-text title mt-3 mb-0"
                           style="
                             font-size: 1.5rem;
                             white-space: nowrap;
@@ -820,16 +805,18 @@
                             text-align: left;
                             letter-spacing: 2px;
                             text-decoration: none;
+                            color: #333366;
                           "
                         >
                           081380747386
                         </p>
                         <p
-                          class="card-text"
+                          class="card-text title"
                           style="
                             font-size: 1.2rem;
                             text-align: left;
                             text-transform: uppercase;
+                            color: #333366;
                           "
                         >
                           Steffia Azzahra
@@ -840,6 +827,7 @@
                         class="img-fluid rounded"
                         width="75"
                         alt="bca"
+                        loading="lazy"
                         style="position: absolute; top: 10px; right: 10px"
                       />
                       <button
@@ -857,7 +845,7 @@
 
                 <!-- Tombol "Kirim Hadiah" -->
                 <button
-                  class="btn rounded-4 btn-custom text-white"
+                  class="btn my-2 rounded-4 btn-custom text-white"
                   id="kirimHadiahButton"
                   onclick="tampilkanAtauTutupOverflowXHidden()"
                 >
@@ -865,10 +853,12 @@
                 </button>
 
                 <!-- Reservasi WhatsApp -->
-                <div class="mt-4" data-aos="fade-up" data-aos-duration="1000">
-                  <span class="font-cool">Reservasi</span>
-                  <br />
-                  <span class="font-kalem">WhatsApp</span>
+                <div
+                  class="font-mantap mt-4"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <div class="title mb-2">Reservasi WhatsApp</div>
                   <p class="mb-2">Nama:</p>
                   <input
                     type="text"
@@ -884,7 +874,7 @@
                     </option>
                   </select>
                   <button
-                    class="btn rounded-4 btn-custom my-2 text-white"
+                    class="btn my-2 rounded-4 btn-custom text-white"
                     onclick="cekDanReservasiWhatsApp()"
                   >
                     <i class="fab fa-whatsapp"></i> Reservasi via WhatsApp
@@ -899,8 +889,22 @@
       <!-- Ucapan Section -->
       <section class="m-0 p-0 py-5" id="ucapan">
         <div class="container" data-aos="fade-up" data-aos-duration="1000">
-          <div class="card-body border rounded-4 shadow p-3 bg-white">
-            <h1 class="font-kalem text-center my-2">Ucapan & Doa</h1>
+          <div class="card-body border rounded-4 shadow p-3 bg-custom">
+            <div class="title text-center mb-4">Ucapan &amp; Doa</div>
+            <div class="text-center" style="position: relative">
+              <hr class="my-2" style="border-color: #000000; order: 2" />
+              <div
+                style="
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  z-index: 1;
+                "
+              >
+                <i class="fas fa-heart fa-lg heart"></i>
+              </div>
+            </div>
             <input type="hidden" id="idbalasan" />
             <div class="mb-1" id="balasan"></div>
             <div class="mb-3">
@@ -964,10 +968,7 @@
             </div>
           </div>
 
-          <div
-            class="rounded-4 mt-4 mb-2 overflow-auto"
-            style="max-height: 400px"
-          >
+          <div class="rounded-4 mt-4 mb-2">
             <div id="daftarucapan"></div>
           </div>
 
@@ -1001,37 +1002,35 @@
 
       <!-- Footer Section-->
       <footer id="footer" class="footer-section bg-dark">
-        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
           <div class="row">
             <div
-              class="col-12 col-md-6 card-body border rounded-4 shadow p-3 m-3 text-center"
+              class="col-12 col-md-6 card-body border rounded-2 shadow p-3 m-3 bg-custom text-center"
             >
-              <span class="font-cool">Doa</span>
-              <br />
-              <span class="font-kalem">Untuk Pengantin</span>
-              <p style="font-size: 1.5rem">
-                Barakallahu laka wa baraka alaika wajama'a baynakuma fi khayr
-              </p>
-              <p style="font-size: 1.2rem">
-                <i>
-                  Semoga Allah memberkahimu di waktu bahagia dan memberkahimu di
-                  waktu susah, serta semoga Allah mempersatukan kalian berdua
-                  dalam kebaikan
-                </i>
-              </p>
+              <div class="title mb-4">Doa Untuk Pengantin</div>
+              <div class="description mb-2">
+                Barokallohu laka wa baroka a'laika wajama'a baynakuma fi khayr
+              </div>
+              <div class="description">
+                Semoga Allah memberkahimu di waktu bahagia dan memberkahimu di
+                waktu susah, serta semoga Allah mempersatukan kalian berdua
+                dalam kebaikan
+              </div>
             </div>
             <div class="col-12 text-center mb-5">
-              <p class="font-mantap">
-                Suatu kebahagiaan tersendiri bagi kami apabila Bapak, Ibu,
-                Saudara/i sekalian berkenan hadir dan memberikan doa restu untuk
-                pernikahan kami supaya menjadi pernikahan Sakinah, Mawaddah,
-                Warahmah
-              </p>
-              <h5 class="font-cool text-center my-2">Marcel &amp; Steffia</h5>
-              <p class="font-nama text-center my-2">Beserta Keluarga Besar</p>
+              <div class="description mb-4">
+                Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila,
+                Bapak / Ibu / Saudara / i. berkenan hadir untuk memberikan do'a
+                restunya kami ucapkan terimakasih.
+              </div>
+              <div class="description mb-2">
+                Wassalamualaikum Warahmatullahi Wabarakatuh
+              </div>
+              <!-- Tulisan nama mempelai -->
+              <div class="title">Marcel &amp; Steffia</div>
 
-              <hr class="my-2" style="border-color: #000000; order: 2" />
-              <p class="font-mantap mb-0" style="font-size: 0.9rem">
+              <hr class="my-2" style="border-color: #ccc1a6; order: 2" />
+              <p class="mb-0" style="font-size: 0.9rem; order: 3">
                 Build with
                 <i class="fa-solid fa-heart text-danger"></i> KenanganBersama
               </p>
@@ -1063,11 +1062,14 @@
 
               <!-- Copyright notice -->
               <div
-                class="font-mantap text-center mt-2"
-                style="font-size: 0.9rem; color: #0ea7c6; order: 5"
+                class="font-mantap text-center mt-2 copyright-year"
+                style="font-size: 0.9rem; color: #ccc1a6; order: 5"
               >
-                <a href="#" style="color: #0ea7c6; text-decoration: none">
-                  &copy; 2023 KenanganBersama. All rights reserved.
+                <a href="#" style="color: #ccc1a6; text-decoration: none">
+                  <span id="copyright-symbol">&copy;</span>
+                  <span id="start-year">2023</span> -
+                  <span id="end-year"></span> KenanganBersama. All rights
+                  reserved.
                 </a>
               </div>
             </div>
@@ -1075,14 +1077,37 @@
         </div>
       </footer>
 
+      <script>
+        // Ambil elemen yang memuat tahun awal hak cipta
+        const startYearElement = document.getElementById("start-year");
+        // Ambil elemen yang memuat tahun akhir hak cipta
+        const endYearElement = document.getElementById("end-year");
+        // Ambil elemen untuk simbol hak cipta
+        const symbolElement = document.getElementById("copyright-symbol");
+
+        // Perbarui tahun hak cipta dengan rentang tahun 2023 - tahun saat ini
+        const startYear = 2023;
+        const currentYear = new Date().getFullYear();
+        startYearElement.textContent = startYear;
+        endYearElement.textContent = currentYear;
+
+        // Tambahkan gaya CSS untuk memberikan warna kuning gold pada tahun
+        startYearElement.style.color = "gold";
+        endYearElement.style.color = "gold";
+
+        // Tambahkan simbol hak cipta ke elemen simbol
+        symbolElement.textContent = "\u00A9";
+      </script>
+
       <button
         type="button"
         id="tombol-musik"
         style="display: none"
-        class="btn btn-light btn-sm rounded-circle btn-music"
+        class="btn btn-light btn-sm rounded-circle btn-music transition"
         onclick="play(this)"
         data-status="true"
         data-url="assets/music/sound.mp3"
+        title="Play"
       >
         <i class="fa-solid fa-circle-pause"></i>
       </button>
@@ -1136,16 +1161,22 @@
             >
               <div
                 class="position-absolute top-0 start-0 w-100 h-100 bg-dark"
-                style="opacity: 0.4"
+                style="opacity: 0.6"
               ></div>
 
-              <div class="text-center position-relative z-index-1">
-                <div class="img-crop border-custom shadow mb-4 mx-auto">
-                  <img src="images/couple.jpg" alt="bg" />
-                </div>
-                <span class="font-kalem">The Wedding Of</span>
-                <h2 class="font-keren mb-0">10.04.2024</h2>
-                <h1 class="font-keren">Marcel &amp; Steffia</h1>
+              <div
+                class="text-center position-relative z-index-1"
+                style="
+                  position: relative;
+                  top: 50%;
+                  transform: translateY(-50%);
+                "
+              >
+                <span class="title">The Wedding Of</span>
+                <h1 class="judul mt-2" style="color: #add8e6">
+                  Marcel &amp; Steffia
+                </h1>
+                <h2 class="font-kalem mt-2">Dear</h2>
                 <div id="namatamu"></div>
                 <button
                   type="button"
@@ -1169,6 +1200,8 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/l10n/de.umd.js"></script>
+
     <script>
       $(document).ready(function () {
         $(".fancybox").fancybox();
